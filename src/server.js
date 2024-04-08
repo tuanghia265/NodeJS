@@ -16,5 +16,5 @@ connectDB();
 let port=process.env.PORT;
 
 app.listen(port,()=>{
-    console.log("Back end nodejs with LTN on port"+port)
+    console.log("Back end nodejs with LTN on port "+port)
 })
