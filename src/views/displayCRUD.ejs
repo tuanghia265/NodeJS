@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get All Users</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    .btn-edit {
+        background-color: red;
+        color: wheat;
+        border-radius: 6px;
+        cursor: pointer;
+        padding: 10px;
+        display: block;
+    }
+
+    .btn-del{
+        background-color: orange;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 6px;
+        display: block;
+    }
+</style>
+
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>RoleID</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <% for(var i=0; i < dataTable.length; i++) { %>
+        <tr>
+            <td>
+                <%= dataTable[i].id %>
+            </td>
+            <td>
+                <%= dataTable[i].firstName %>
+            </td>
+            <td>
+                <%= dataTable[i].lastName %>
+            </td>
+            <td>
+                <%= dataTable[i].email %>
+            </td>
+            <td>
+                <%= dataTable[i].password %>
+            </td>
+            <td>
+                <%= dataTable[i].roleID %>
+            </td>
+            <td>
+                <a href="/edit-crud/?id=<%= dataTable[i].id%>" class="btn-edit" type="button">Edit</a>
+                <a href="/del-crud/?id=<%=dataTable[i].id%>" class="btn-del" type="button">Delete</a>
+            </td>
+        </tr>
+        <% } %>
+            </tr>
+
+    </table>
+</body>
+
+</html>
