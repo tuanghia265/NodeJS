@@ -2,18 +2,18 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('userRole', {
+    await queryInterface.createTable('UserRoles', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userID:{
-        type:Sequelize.INTEGER
+      userID: {
+        type: Sequelize.INTEGER
       },
-      roleID:{
-        type:Sequelize.INTEGER
+      roleID: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -26,6 +26,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('userRole');
+    await queryInterface.dropTable('UserRoles');
   }
 };

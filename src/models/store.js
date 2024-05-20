@@ -14,10 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Store.init({
-    name: DataTypes.STRING,
-    roleID: DataTypes.STRING,
-    image: DataTypes.STRING,
-    url: DataTypes.STRING
+    name:DataTypes.STRING,
+    userID: DataTypes.INTEGER,
+    image:DataTypes.STRING,
+    url:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Store',

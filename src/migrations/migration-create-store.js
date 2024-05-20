@@ -12,8 +12,8 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      roleID: {
-        type: Sequelize.STRING
+      userID: {
+        type: Sequelize.INTEGER
       },
       image: {
         type: Sequelize.STRING
